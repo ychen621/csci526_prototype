@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
 
     private Rigidbody2D rb;
-    
+
+    public GameObject player;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -55,5 +58,12 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    void OnBecameInvisible()
+    {
+        player = GameObject.Find("Player");
+        //Destroy(ball);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
