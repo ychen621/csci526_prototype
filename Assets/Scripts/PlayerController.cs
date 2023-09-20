@@ -64,6 +64,6 @@ public class PlayerController : MonoBehaviour
     {
         player = GameObject.Find("Player");
         //Destroy(ball);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

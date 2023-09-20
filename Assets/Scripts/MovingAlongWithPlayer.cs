@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveAlongPath : MonoBehaviour
+public class MovingAlongWithPlayer : MonoBehaviour
 {
+
     //Private Variables
     private int currIndex = 0;
-    
+
+    public GameObject player;
     //Public Variables
     public Vector2[] setPoints;
     public float movingSpeed = 1.0f;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,5 +33,22 @@ public class MoveAlongPath : MonoBehaviour
         }
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D other)
+
+    {
+       
+        if (other.tag == "Player") 
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.transform.SetParent(null);
+        }
+    }
 }
