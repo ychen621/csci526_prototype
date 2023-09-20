@@ -721,11 +721,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1335204886629473856, guid: 698f2295d757d4966bee268da7b3b4b2, type: 3}
       propertyPath: setPoints.Array.data[0].y
-      value: -19.92879
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 1335204886629473856, guid: 698f2295d757d4966bee268da7b3b4b2, type: 3}
       propertyPath: setPoints.Array.data[1].y
-      value: -19.92879
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 1335204886629473859, guid: 698f2295d757d4966bee268da7b3b4b2, type: 3}
       propertyPath: m_IsTrigger
