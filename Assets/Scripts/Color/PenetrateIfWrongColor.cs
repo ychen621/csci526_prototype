@@ -19,7 +19,7 @@ public class PenetrateIfWrongColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<SpriteRenderer>().color == sr.color)
+        if (player.GetComponent<SpriteRenderer>().color == sr.color || player.GetComponent<SpriteRenderer>().color == Color.white)
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
