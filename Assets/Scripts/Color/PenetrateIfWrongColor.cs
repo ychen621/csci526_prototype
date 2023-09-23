@@ -23,5 +23,10 @@ public class PenetrateIfWrongColor : MonoBehaviour
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
+
+        if (player.GetComponent<SpriteRenderer>().color != sr.color)
+        {
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
 }

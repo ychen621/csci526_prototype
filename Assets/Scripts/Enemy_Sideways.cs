@@ -13,5 +13,7 @@ public class Enemy_Sideways : MonoBehaviour
         {
             other.GetComponent<Healthsystem>().TakeDamage(damage);
         }
+
+
     }
 }
