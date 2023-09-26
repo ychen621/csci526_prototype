@@ -9,7 +9,7 @@ using UnityEngine.InputSystem.Utilities;
 public partial class @RestartAction: IInputActionCollection2, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @RestartAction()SS
+    public @RestartAction()
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""RestartAction"",
