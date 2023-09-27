@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour
     private Camera mainCamera;
     private float movingSpeed = 1.0f;
     private float elapsedTime = 0f;
-    public float gameDuration = 35f;
+    public float gameDuration = 30f;
 
     void Start()
     {

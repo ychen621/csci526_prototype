@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     //Private variables
@@ -14,7 +15,9 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
 
     private Rigidbody2D rb;
-    
+
+    public GameObject player;// added
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -57,5 +60,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   
+ 
+
+    void OnBecameInvisible()
+    {
+        player = GameObject.Find("Player");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
